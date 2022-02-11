@@ -1,9 +1,10 @@
 import React from "react";
+import "./Navigation.css";
 
-export default function () {
+export default function Navigation () {
   return (
     <div className="displaybar d-flex justify-content-around">
-      <div className="Todo">
+      <div className="todo">
         <span>icon</span>
         <p>ToDo(0)</p>
       </div>
