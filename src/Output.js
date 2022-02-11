@@ -1,8 +1,9 @@
 import React from "react";
+import "./Output.css";
 
 export default function Output(){
     return (
-      <div className="Output">
+      <div className="output">
         <form>
           <fieldset>
             <input type="checkbox" value="Milch kaufen" />
