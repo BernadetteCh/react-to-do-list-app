@@ -1,4 +1,5 @@
 import React from "react";
+import Navigation from "./Navigation.js";
 
 export default function ToDoList() {
   return (
@@ -11,6 +12,7 @@ export default function ToDoList() {
           <button>Create</button>
         </form>
       </div>
+      <Navigation />
     </div>
   );
 }
