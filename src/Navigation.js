@@ -1,6 +1,6 @@
 import React from "react";
 import "./Navigation.css";
-import Output from "./Output.js";
+
 
 export default function Navigation () {
   return (
@@ -15,7 +15,6 @@ export default function Navigation () {
           <p>All(3)</p>
         </div>
       </div>
-      <Output />
-    </div>
+     </div>
   );
 }
