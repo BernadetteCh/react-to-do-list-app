@@ -3,35 +3,66 @@ import Navigation from "./Navigation.js";
 import Output from "./Output.js";
 
 export default function ToDoList() {
-  const [todolist, setTodolist] = useState(""); //mit diesem state zeig i das value was beim input eingegeben wird
-  const [list, setList] = useState("");//dieses state sorgt dafür, dass das eingegebene erst erscheint sobald man auf enter drückt 
+
+const[todolist, setTodolist]=useState("");//dieses State sorgt dafür, dass was im input eingegeben wird dann als Todo erscheint
+const[loaded, setLoaded]=useState(null);//dieses State sorgt dafür, dass beim Laden der Seite erstmal nur die Hauptform gezeigt wird, erst 
+                                        //indem ich setLoaded auf true setze in der function handleSubmit, erscheint erst bei Eingabebestätigung die eingegeben Todo. 
+
+
 
   function handleChange(event) {
     event.preventDefault();
-  setTodolist(event.target.value);
+    setTodolist(event.target.value);
+ 
   }
 
   function handleSubmit(event) {
     event.preventDefault();
-    setList(todolist);
+    setLoaded(true);
+  
   }
 
-  return (
-    <div className="ToDoList">
-      <h1>To-Do List</h1>
-      <h2>Add Task</h2>
-      <div className="input">
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Add to list"
-            onChange={handleChange}
-          ></input>
-          <button>Create</button>
-        </form>
-      </div>
-      <Navigation />
-      <Output output={list} />
-    </div>
-  );
+  if(loaded){
+      return (
+        <div className="ToDoList">
+          <h1>To-Do List</h1>
+          <h2>Add Task</h2>
+          <div className="input">
+            <form onSubmit={handleSubmit}>
+              <input
+                type="text"
+                placeholder="Add to list"
+                className="input"
+                onChange={handleChange}
+              ></input>
+              <button>Create</button>
+            </form>
+          </div>
+          <Navigation />
+          <Output output={todolist} />
+        </div>
+      );
+
+  }else{
+    return(
+       <div className="ToDoList">
+          <h1>To-Do List</h1>
+          <h2>Add Task</h2>
+          <div className="input">
+            <form onSubmit={handleSubmit}>
+              <input
+                type="text"
+                placeholder="Add to list"
+                className="input"
+                onChange={handleChange}
+              ></input>
+              <button>Create</button>
+            </form>
+          </div>
+          <Navigation />
+          </div>
+
+    )
+  }
 }
+
