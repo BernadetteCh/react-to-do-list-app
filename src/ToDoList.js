@@ -4,7 +4,7 @@ import Output from "./Output.js";
 
 export default function ToDoList() {
 
-const[todolist, setTodolist]=useState("");//dieses State sorgt dafür, dass was im input eingegeben wird dann als Todo erscheint
+const[input, setInput]=useState("");//dieses State sorgt dafür, dass was im input eingegeben wird dann als Todo erscheint
 const[loaded, setLoaded]=useState(null);//dieses State sorgt dafür, dass beim Laden der Seite erstmal nur die Hauptform gezeigt wird, erst 
                                         //indem ich setLoaded auf true setze in der function handleSubmit, erscheint erst bei Eingabebestätigung die eingegeben Todo. 
 
@@ -12,7 +12,7 @@ const[loaded, setLoaded]=useState(null);//dieses State sorgt dafür, dass beim L
 
   function handleChange(event) {
     event.preventDefault();
-    setTodolist(event.target.value);
+    setInput(event.target.value);
  
   }
 
@@ -39,7 +39,7 @@ const[loaded, setLoaded]=useState(null);//dieses State sorgt dafür, dass beim L
             </form>
           </div>
           <Navigation />
-          <Output output={todolist} />
+          <Output output={input} />
         </div>
       );
 
