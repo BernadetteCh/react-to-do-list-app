@@ -12,7 +12,7 @@ return (
       {props.output.map(function (list, index) {
         return (
           <div key={index}>
-            <List />
+            <List list={list}/>
           </div>
         );
       })}
