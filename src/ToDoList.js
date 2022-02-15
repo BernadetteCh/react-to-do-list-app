@@ -39,7 +39,7 @@ export default function ToDoList() {
             <button>Create</button>
           </form>
         </div>
-        <Navigation />
+        <Navigation output={todos} />
         <Output output={todos} />
       </div>
     );
