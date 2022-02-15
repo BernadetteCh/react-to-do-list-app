@@ -1,5 +1,6 @@
 import React from "react";
 import "./Navigation.css";
+import Done from "./Done.js";
 
 
 export default function Navigation () {
@@ -12,7 +13,7 @@ export default function Navigation () {
         </div>
         <div className="all">
           <span>icon</span>
-          <p>All(3)</p>
+          <p><Done /></p>
         </div>
       </div>
      </div>
