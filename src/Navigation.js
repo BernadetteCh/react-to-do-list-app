@@ -1,19 +1,22 @@
 import React from "react";
 import "./Navigation.css";
 import Done from "./Done.js";
+import Todo from "./Todo.js";
 
 
-export default function Navigation () {
+export default function Navigation (props) {
+  console.log(props.output);
+
   return (
     <div className="Navigationbar">
       <div className="displaybar d-flex justify-content-around">
         <div className="todo">
           <span>icon</span>
-          <p>ToDo(0)</p>
+          <Todo />
         </div>
         <div className="all">
           <span>icon</span>
-          <p><Done /></p>
+          <Done />
         </div>
       </div>
      </div>
