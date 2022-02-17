@@ -40,7 +40,7 @@ export default function ToDoList() {
           </form>
         </div>
         <Navigation output={todos} />
-        <Output output={todos} />
+        <Output output={todos} setTodos={setTodos} />
       </div>
     );
   } else {
