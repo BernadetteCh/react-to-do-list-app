@@ -1,29 +1,31 @@
-import React, {useState} from "react";
+import React from "react";
 
-export default function List(props) {
-  const[checked, setChecked]=useState(props.list.text);
+export default function List({ list, text, output, setTodos }) {
+  function handleDelete() {
+   setTodos(output.filter((el) => el.id !== list.id));
+    //output.filter : geht durch alle todos die man bei der Eingabe erstellt. 
+    //el => el.id !== list.id : if el (element). id does not match the id of the list it gets rid of it. 
+    //ich filtere das state in meinem fall heißt es output aus und vergleiche es mit dem was ich angeklickt habe, das ist list.id
+    //und wenn es übereinstimmt wird es gelöscht
+  }
+
+  /*  const[checked, setChecked]=useState(props.list.text);
   
 
   function handleCheck(event) {
     event.preventDefault();
-    setChecked(false);
-  }
+    setChecked(false);*/
 
-if(checked){
   return (
     <div className="list">
       <fieldset>
-        <input type="checkbox" onClick={handleCheck} />
-        <label>{props.list.text}</label>
-        <span>🙉</span>
+        <input type="checkbox" />
+        <label>{text}</label>
+        <span>
+          <button onClick={handleDelete}>🙉</button>
+        </span>
         <br />
       </fieldset>
     </div>
   );
-}else{
-  return(
-    null
-  );
-}
-
 }
