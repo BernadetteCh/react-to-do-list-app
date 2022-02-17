@@ -5,7 +5,7 @@ import Todo from "./Todo.js";
 
 
 export default function Navigation (props) {
-  console.log(props.output);
+
 
   return (
     <div className="Navigationbar">
