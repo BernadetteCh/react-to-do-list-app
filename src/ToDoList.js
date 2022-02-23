@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Output from "./Output.js";
+import "./ToDoList.css";
 
 export default function ToDoList() {
   const [input, setInput] = useState(""); //dieses State sorgt dafür, dass was im input eingegeben wird dann als Todo erscheint
