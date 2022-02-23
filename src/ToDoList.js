@@ -22,6 +22,7 @@ export default function ToDoList() {
     setLoaded(true);
   }
 
+
   if (loaded) {
     return (
       <div className="ToDoList">
@@ -37,6 +38,17 @@ export default function ToDoList() {
             ></input>
             <button>Create</button>
           </form>
+          <ul>
+            <li>
+              <button>Todos</button>
+            </li>
+            <li>
+              <button>Done</button>
+            </li>
+            <li>
+              <button>All</button>
+            </li>
+          </ul>
         </div>
 
         <Output output={todos} setTodos={setTodos} />
@@ -58,6 +70,13 @@ export default function ToDoList() {
             <button>Create</button>
           </form>
         </div>
+        <ul>
+          <li>
+            <button>Todos</button>
+          </li>
+          <li><button>Done</button></li>
+          <li><button>All</button></li>
+        </ul>
       </div>
     );
   }
