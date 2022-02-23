@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Navigation from "./Navigation.js";
 import Output from "./Output.js";
 
 export default function ToDoList() {
@@ -19,7 +18,7 @@ export default function ToDoList() {
     setTodos([
       ...todos,
       { text: input, completed: false, id: Math.random() * 1000 },
-    ]); //...todos  damit sog i dem PC:wenn ich schon todos habe füge die neue Eingabe einfach hinzu 
+    ]); //...todos  damit sog i dem PC:wenn ich schon todos habe füge die neue Eingabe einfach hinzu
     setLoaded(true);
   }
 
@@ -39,7 +38,7 @@ export default function ToDoList() {
             <button>Create</button>
           </form>
         </div>
-        <Navigation output={todos} />
+
         <Output output={todos} setTodos={setTodos} />
       </div>
     );
@@ -59,7 +58,6 @@ export default function ToDoList() {
             <button>Create</button>
           </form>
         </div>
-        <Navigation />
       </div>
     );
   }
