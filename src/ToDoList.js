@@ -13,16 +13,15 @@ export default function ToDoList() {
     setInput(event.target.value);
     console.log(event.target.value);
   }
-
-  function handleSubmit(event) {
-    event.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
     setTodos([
       ...todos,
       { text: input, completed: false, id: Math.random() * 1000 },
     ]); //...todos  damit sog i dem PC:wenn ich schon todos habe füge die neue Eingabe einfach hinzu
     setLoaded(true);
-  }
-
+    setInput(""); //input soll leer sein sobald man eine Todo submitted hat
+  };
 
   if (loaded) {
     return (
@@ -52,7 +51,7 @@ export default function ToDoList() {
           </ul>
         </div>
 
-        <Output output={todos} setTodos={setTodos} />
+        <Output todos={todos} setTodos={setTodos} />
       </div>
     );
   } else {
@@ -75,8 +74,12 @@ export default function ToDoList() {
           <li>
             <button>Todos</button>
           </li>
-          <li><button>Done</button></li>
-          <li><button>All</button></li>
+          <li>
+            <button>Done</button>
+          </li>
+          <li>
+            <button>All</button>
+          </li>
         </ul>
       </div>
     );
