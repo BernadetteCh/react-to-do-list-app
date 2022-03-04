@@ -31,6 +31,7 @@ export default function ToDoList() {
         <div className="input">
           <form onSubmit={handleSubmit}>
             <input
+            value={input}
               type="text"
               placeholder="Add to list"
               className="input"
