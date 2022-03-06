@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Output from "./Output.js";
 import "./ToDoList.css";
 
@@ -10,7 +10,9 @@ export default function ToDoList() {
   const [status, setStatus] = useState("all");
   const [filteredtodos, setFilteredTodos] = useState([]);
   //useEffect
-
+  useEffect(() => {
+    filterHandler();
+  }, [todos, status]);
 
   const filterHandler = () => {
     switch (status) {
@@ -33,7 +35,7 @@ export default function ToDoList() {
   function handleChange(event) {
     event.preventDefault();
     setInput(event.target.value);
-    console.log(event.target.value);
+   
   }
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -74,7 +76,7 @@ export default function ToDoList() {
           </ul>
         </div>
 
-        <Output todos={todos} setTodos={setTodos} />
+        <Output todos={todos} setTodos={setTodos} filteredtodos={filteredtodos}/>
       </div>
     );
   } else {
