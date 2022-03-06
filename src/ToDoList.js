@@ -7,6 +7,13 @@ export default function ToDoList() {
   const [todos, setTodos] = useState([]);
   const [loaded, setLoaded] = useState(null); //dieses State sorgt dafür, dass beim Laden der Seite erstmal nur die Hauptform gezeigt wird, erst
   //indem ich setLoaded auf true setze in der function handleSubmit, erscheint erst bei Eingabebestätigung die eingegeben Todo.
+const[status,setStatus]=useState("all");
+
+
+
+const handleStatus=(e)=>{
+ setStatus(e.target.value);
+}
 
   function handleChange(event) {
     event.preventDefault();
@@ -39,15 +46,15 @@ export default function ToDoList() {
             ></input>
             <button>Create</button>
           </form>
-          <ul>
+          <ul onClick={handleStatus}>
             <li>
-              <button>Todos</button>
+              <button value="uncompleted">Todos</button>
             </li>
             <li>
-              <button>Done</button>
+              <button value="completed">Done</button>
             </li>
             <li>
-              <button>All</button>
+              <button value="all">All</button>
             </li>
           </ul>
         </div>
