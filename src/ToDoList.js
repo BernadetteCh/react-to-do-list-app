@@ -8,7 +8,9 @@ export default function ToDoList() {
   /*const [loaded, setLoaded] = useState(null); //dieses State sorgt dafür, dass beim Laden der Seite erstmal nur die Hauptform gezeigt wird, erst
   //indem ich setLoaded auf true setze in der function handleSubmit, erscheint erst bei Eingabebestätigung die eingegeben Todo.*/
   const [status, setStatus] = useState("all");
-  const [filteredtodos, setFilteredTodos] = useState([]);
+  const [filteredtodos, setFilteredTodos] = useState([]); //ein zweites state mit todos wird erstellt, weil i brauch in solides array mit todos das net verändert werden soll
+  //und eines wo ich die todos "herumschieben " kann
+
   //useEffect
   useEffect(() => {
     filterHandler();
@@ -17,18 +19,19 @@ export default function ToDoList() {
   const filterHandler = () => {
     switch (status) {
       case "completed":
-        setFilteredTodos(todos.filter((todo) => todo.completed === true));
+        setFilteredTodos(todos.filter((todo) => todo.completed === true)); //ursprüngliche state mit den todos wird gefiltert und wenn des todo vom map true is setz es completed
         break;
       case "uncompleted":
         setFilteredTodos(todos.filter((todo) => todo.completed === false));
         break;
       default:
-        setFilteredTodos(todos);
+        setFilteredTodos(todos); //hier sollen alle todos gezeigt werden
         break;
     }
   };
 
   function handleStatus(e) {
+    e.preventDefault();
     setStatus(e.target.value);
   }
 
@@ -59,17 +62,15 @@ export default function ToDoList() {
             onChange={handleChange}
           ></input>
           <button>Create</button>
-          <div onClick={handleStatus}>
-            <button value="uncompleted">Todos</button>
-            <button value="completed">Done</button>
-            <button value="all">All</button>
-          </div>
+         <ul onClick={handleStatus}>
+           <li><button value="uncompleted">Todos</button></li>
+           <li><button value="completed">Done</button></li>
+           <li><button value="all">All</button></li>
+         </ul>
         </form>
       </div>
 
       <Output todos={todos} setTodos={setTodos} filteredtodos={filteredtodos} />
     </div>
   );
- 
-
 }
