@@ -19,7 +19,7 @@ export default function List({ todo, text, todos, setTodos }) {
             completed: !element.completed,
           };
         }
-        return element;
+        return (element);
       })
     );
   }
@@ -30,16 +30,16 @@ export default function List({ todo, text, todos, setTodos }) {
   //im Grunde vergleiche ich wieder die id und gebe es als Objekt mit properties zurück
   return (
     <div className="list">
-      <fieldset>
-        <input type="checkbox" onClick={handleCheck} />
-        <label className={`todos ${todo.completed ? "completed" : ""}`}>
+     
+        <li className={`todos ${todo.completed ? "completed" : ""}`}>
           {text}
-        </label>
+        </li>
         <span>
+          <button onClick={handleCheck}>Check</button>
           <button onClick={handleDelete}>🙉</button>
         </span>
         <br />
-      </fieldset>
+    
     </div>
   );
   //todos ist der ursprüngliche className. ich verwende `` um Javascript zu schreiben.
