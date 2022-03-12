@@ -35,8 +35,8 @@ export default function List({ todo, text, todos, setTodos }) {
           {text}
         </li>
         <span>
-          <button onClick={handleCheck}>Check</button>
-          <button onClick={handleDelete}>🙉</button>
+          <button onClick={handleCheck}><img src="./checkbutton.png" alt="checkbutton"></img></button>
+          <button onClick={handleDelete}><img src="./delete button.png" alt="deletebutton"></img></button>
         </span>
         <br />
     
