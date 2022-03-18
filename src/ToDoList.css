@@ -1,8 +1,17 @@
-ul{
-    padding: 0px;
-    margin: 10px auto;
+.ToDoList
+h1 {
+  font-weight: bold;
+  margin: 80px 0px 20px auto;
+letter-spacing: 8px;
+font-size: 50px;
 }
-li{
-    list-style: none;
-    display: inline;
+.ToDoList
+ul {
+  padding: 0px;
+  margin: 10px auto;
+}
+.ToDoList
+li {
+  list-style: none;
+  display: inline;
 }
