@@ -55,15 +55,21 @@ export default function ToDoList() {
           <input
             value={input}
             placeholder="Add to list"
-            className="input"
+            className="input form-control form-control-lg w-50"
             onChange={handleChange}
           ></input>
           <button>Create</button>
-         <ul onClick={handleStatus}>
-           <li><button value="uncompleted">Todos</button></li>
-           <li><button value="completed">Done</button></li>
-           <li><button value="all">All</button></li>
-         </ul>
+          <ul onClick={handleStatus}>
+            <li>
+              <button value="uncompleted">Todos</button>
+            </li>
+            <li>
+              <button value="completed">Done</button>
+            </li>
+            <li>
+              <button value="all">All</button>
+            </li>
+          </ul>
         </form>
       </div>
 
