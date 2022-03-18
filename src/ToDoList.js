@@ -48,7 +48,7 @@ export default function ToDoList() {
 
   return (
     <div className="ToDoList">
-      <h1>To-Do List</h1>
+      <h1>To-Do-List App</h1>
       <h2>Add Task</h2>
       <div className="input">
         <form onSubmit={handleSubmit}>
