@@ -23,3 +23,10 @@ li {
   list-style: none;
   display: inline;
 }
+.ToDoList .input{
+    text-align: left;
+}
+.ToDoList input{
+    display: inline-block;
+    margin-right: 35px;
+}
