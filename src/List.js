@@ -29,17 +29,21 @@ export default function List({ todo, text, todos, setTodos }) {
   //gib alle elemente(meine todos) wieder und setze das completed (welches im Array als false deklariert wurde) ins Gegenteil also zu true.
   //im Grunde vergleiche ich wieder die id und gebe es als Objekt mit properties zurück
   return (
-    <div className="list">
-     
-        <li className={`todos ${todo.completed ? "completed" : ""}`}>
-          {text}
-        </li>
+    <div className="row justify-content-between list">
+      <div className="col-4">
+        <li className={`todos ${todo.completed ? "completed" : ""}`}>{text}</li>
+      </div>
+      <div className="col-4">
         <span>
-          <button onClick={handleCheck}><img src="./checkbutton.png" alt="checkbutton"></img></button>
-          <button onClick={handleDelete}><img src="./delete button.png" alt="deletebutton"></img></button>
+          <button onClick={handleCheck}>
+            <img src="./checkbutton.png" alt="checkbutton"></img>
+          </button>
+          <button onClick={handleDelete}>
+            <img src="./delete button.png" alt="deletebutton"></img>
+          </button>
         </span>
         <br />
-    
+      </div>
     </div>
   );
   //todos ist der ursprüngliche className. ich verwende `` um Javascript zu schreiben.
