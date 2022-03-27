@@ -61,13 +61,19 @@ export default function ToDoList() {
           <button className="setToDo">Create</button>
           <ul onClick={handleStatus}>
             <li>
-              <button value="uncompleted">Todos</button>
+              <button className="navigationbutton" value="uncompleted">
+                Todos
+              </button>
             </li>
             <li>
-              <button value="completed">Done</button>
+              <button className="navigationbutton" value="completed">
+                Done
+              </button>
             </li>
             <li>
-              <button value="all">All</button>
+              <button className="navigationbutton" value="all">
+                All
+              </button>
             </li>
           </ul>
         </form>
