@@ -7,7 +7,7 @@ export default function Output({ todos, setTodos, filteredtodos }) {
   //i a Todo eintippe soll diese dann im output erscheinen als eigenes List component
 
   return (
-    <div>
+    <div className="output">
       {filteredtodos.map(function (todo, index) {
         return (
           <ul key={index}>
