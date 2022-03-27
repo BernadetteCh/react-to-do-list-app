@@ -30,3 +30,16 @@ li {
     display: inline-block;
     margin-right: 35px;
 }
+.ToDoList .setToDo{
+ border: 1px solid #1C5C9C;
+    padding: 12px 40px;
+    border-radius: 4px;
+    background-color: #1C5C9C;
+    color: #68CAEA;
+    transition: all 0.2s ease-out;
+}
+.ToDoList .setToDo:hover{
+  background-color: #68CAEA;
+  border: 1px solid #68CAEA;
+  color: #1C5C9C;
+}
