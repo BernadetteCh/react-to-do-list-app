@@ -1,45 +1,54 @@
-.ToDoList
-h1 {
+.ToDoList h1 {
   font-weight: bold;
   margin: 80px 0px 20px auto;
-letter-spacing: 8px;
-font-size: 50px;
+  letter-spacing: 8px;
+  font-size: 50px;
 }
-.ToDoList h2{
-    letter-spacing: 8px;
-    text-align: left;
-    margin-top: 90px;
-    margin-bottom: 45px;
-    
-
+.ToDoList h2 {
+  letter-spacing: 8px;
+  text-align: left;
+  margin-top: 90px;
+  margin-bottom: 45px;
 }
-.ToDoList
-ul {
+.ToDoList ul {
   padding: 0px;
   margin: 10px auto;
 }
-.ToDoList
-li {
+.ToDoList li {
   list-style: none;
   display: inline;
 }
-.ToDoList .input{
-    text-align: left;
+.ToDoList .input {
+  text-align: left;
 }
-.ToDoList input{
-    display: inline-block;
-    margin-right: 35px;
+.ToDoList input {
+  display: inline-block;
+  margin-right: 35px;
 }
-.ToDoList .setToDo{
- border: 1px solid #1C5C9C;
-    padding: 12px 40px;
-    border-radius: 4px;
-    background-color: #1C5C9C;
-    color: #68CAEA;
-    transition: all 0.2s ease-out;
+.ToDoList ul li .navigationbutton {
+  margin-top: 30px;
 }
-.ToDoList .setToDo:hover{
-  background-color: #68CAEA;
-  border: 1px solid #68CAEA;
-  color: #1C5C9C;
+
+.ToDoList .navigationbutton {
+  margin: 0px 20px 0px 0px;
+  padding: 2px 28px 2px 4px;
+  border: 1px solid #68caea;
+  background-color: #68caea;
+  color: #1c5c9c;
+  font-size: 18px;
+  border-radius: 4px;
+  transition: all 0.2s ease-out;
+}
+.ToDoList .navigationbutton:hover {
+  border: 1px solid #1c5c9c;
+  background-color: #1c5c9c;
+  color: #68caea;
+}
+.ToDoList .setToDo {
+  border: 1px solid #1c5c9c;
+  padding: 12px 40px;
+  border-radius: 4px;
+  background-color: #1c5c9c;
+  color: #68caea;
+  background-color: #1c5c9c;
 }
