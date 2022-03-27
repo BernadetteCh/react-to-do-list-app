@@ -58,7 +58,7 @@ export default function ToDoList() {
             className="input form-control form-control-lg w-50"
             onChange={handleChange}
           ></input>
-          <button>Create</button>
+          <button className="setToDo">Create</button>
           <ul onClick={handleStatus}>
             <li>
               <button value="uncompleted">Todos</button>
