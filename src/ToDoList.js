@@ -59,6 +59,7 @@ export default function ToDoList() {
             onChange={handleChange}
           ></input>
           <button className="setToDo">Create</button>
+          <div className="navigation">
           <ul onClick={handleStatus}>
             <li>
               <button className="navigationbutton" value="uncompleted">
@@ -76,6 +77,7 @@ export default function ToDoList() {
               </button>
             </li>
           </ul>
+          </div>
         </form>
       </div>
 
