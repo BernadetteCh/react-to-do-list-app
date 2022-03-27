@@ -54,7 +54,7 @@ export default function ToDoList() {
         <form onSubmit={handleSubmit}>
           <input
             value={input}
-            placeholder="Add to list"
+            placeholder="Add to do"
             className="input form-control form-control-lg w-50"
             onChange={handleChange}
           ></input>
