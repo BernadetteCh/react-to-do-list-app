@@ -10,13 +10,17 @@
   margin-top: 90px;
   margin-bottom: 45px;
 }
+.ToDoList .navigation {
+  margin: 30px 0px;
+}
 .ToDoList ul {
   padding: 0px;
-  margin: 10px auto;
+  text-align: left;
 }
 .ToDoList li {
   list-style: none;
   display: inline;
+  font-size: 20px;
 }
 .ToDoList .input {
   text-align: left;
@@ -25,17 +29,14 @@
   display: inline-block;
   margin-right: 35px;
 }
-.ToDoList ul li .navigationbutton {
-  margin-top: 30px;
-}
 
 .ToDoList .navigationbutton {
   margin: 0px 20px 0px 0px;
-  padding: 2px 28px 2px 4px;
+  padding: 2px 45px 2px 4px;
   border: 1px solid #68caea;
   background-color: #68caea;
   color: #1c5c9c;
-  font-size: 18px;
+  font-size: 22px;
   border-radius: 4px;
   transition: all 0.2s ease-out;
 }
@@ -46,9 +47,10 @@
 }
 .ToDoList .setToDo {
   border: 1px solid #1c5c9c;
-  padding: 12px 40px;
+  padding: 9px 40px;
   border-radius: 4px;
   background-color: #1c5c9c;
   color: #68caea;
   background-color: #1c5c9c;
+  font-size: 20px;
 }
