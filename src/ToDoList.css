@@ -12,6 +12,8 @@
 }
 .ToDoList .navigation {
   margin: 30px 0px;
+  background-color: rgb(170 170 170 / 9%);
+    padding: 20px 0px 10px 15px;
 }
 .ToDoList ul {
   padding: 0px;
