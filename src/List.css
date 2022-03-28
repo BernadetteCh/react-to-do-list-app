@@ -5,4 +5,5 @@
 .List, button{
     border: none;
     background-color: white;
+    margin-right: 20px;
 }
