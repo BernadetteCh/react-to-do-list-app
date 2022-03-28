@@ -60,28 +60,31 @@ export default function ToDoList() {
           ></input>
           <button className="setToDo">Create</button>
           <div className="navigation">
-          <ul onClick={handleStatus}>
-            <li>
-              <button className="navigationbutton" value="uncompleted">
-                Todos
-              </button>
-            </li>
-            <li>
-              <button className="navigationbutton" value="completed">
-                Done
-              </button>
-            </li>
-            <li>
-              <button className="navigationbutton" value="all">
-                All
-              </button>
-            </li>
-          </ul>
+            <ul onClick={handleStatus}>
+              <li>
+                <button className="navigationbutton" value="uncompleted">
+                  Todos
+                </button>
+              </li>
+              <li>
+                <button className="navigationbutton" value="completed">
+                  Done
+                </button>
+              </li>
+              <li>
+                <button className="navigationbutton" value="all">
+                  All
+                </button>
+              </li>
+            </ul>
+            <Output
+              todos={todos}
+              setTodos={setTodos}
+              filteredtodos={filteredtodos}
+            />
           </div>
         </form>
       </div>
-
-      <Output todos={todos} setTodos={setTodos} filteredtodos={filteredtodos} />
     </div>
   );
 }
