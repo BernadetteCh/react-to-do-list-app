@@ -1,9 +1,11 @@
-.List, .completed{
-    text-decoration: line-through;
+.List,
+.completed {
+  text-decoration: line-through;
 }
 
-.List, button{
-    border: none;
-    background-color: white;
-    margin-right: 20px;
+.List,
+button {
+  border: none;
+  background-color: white;
+  margin-right: 20px;
 }
