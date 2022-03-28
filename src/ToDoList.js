@@ -22,8 +22,8 @@ export default function ToDoList() {
       case "uncompleted":
         setFilteredTodos(todos.filter((todo) => todo.completed === false));
         break;
-      default:
-        setFilteredTodos(todos); //hier sollen alle todos gezeigt werden
+      default: //hier sollen alle todos gezeigt werden
+        setFilteredTodos(todos);
         break;
     }
   };
@@ -44,7 +44,7 @@ export default function ToDoList() {
       { text: input, completed: false, id: Math.random() * 1000 },
     ]); //...todos  damit sog i dem PC:wenn ich schon todos habe füge die neue Eingabe einfach hinzu
     setInput(""); //input soll leer sein sobald man eine Todo submitted hat
-  }
+  };
 
   return (
     <div className="ToDoList">
@@ -59,31 +59,31 @@ export default function ToDoList() {
             onChange={handleChange}
           ></input>
           <button className="setToDo">Create</button>
-          <div className="navigation">
-            <ul onClick={handleStatus}>
-              <li>
-                <button className="navigationbutton" value="uncompleted">
-                  Todos
-                </button>
-              </li>
-              <li>
-                <button className="navigationbutton" value="completed">
-                  Done
-                </button>
-              </li>
-              <li>
-                <button className="navigationbutton" value="all">
-                  All
-                </button>
-              </li>
-            </ul>
-            <Output
-              todos={todos}
-              setTodos={setTodos}
-              filteredtodos={filteredtodos}
-            />
-          </div>
         </form>
+        <div className="navigation">
+          <ul onClick={handleStatus}>
+            <li>
+              <button className="navigationbutton" value="uncompleted">
+                Todos
+              </button>
+            </li>
+            <li>
+              <button className="navigationbutton" value="completed">
+                Done
+              </button>
+            </li>
+            <li>
+              <button className="navigationbutton" value="all">
+                All
+              </button>
+            </li>
+          </ul>
+          <Output
+            todos={todos}
+            setTodos={setTodos}
+            filteredtodos={filteredtodos}
+          />
+        </div>
       </div>
     </div>
   );
