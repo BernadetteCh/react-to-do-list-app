@@ -86,7 +86,9 @@ export default function ToDoList() {
             </ul>
           </div>
         </div>
-        <button onClick={removeTodos}>Delete All</button>
+        <div className="Footer">
+          <button className="deleteTodos" onClick={removeTodos}>Delete All</button>
+        </div>
       </div>
     );
   } else {
@@ -129,7 +131,9 @@ export default function ToDoList() {
             />
           </div>
         </div>
-        <button onClick={removeTodos}>Delete All</button>
+        <div className="Footer">
+          <button className="deleteTodos" onClick={removeTodos}>Delete All</button>
+        </div>
       </div>
     );
   }
