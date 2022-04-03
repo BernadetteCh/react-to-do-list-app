@@ -6,8 +6,9 @@ export default function ToDoList() {
   const [input, setInput] = useState(""); //dieses State sorgt dafür, dass was im input eingegeben wird dann als Todo erscheint
   const [todos, setTodos] = useState([]);
   const [status, setStatus] = useState("all");
-  const [filteredtodos, setFilteredTodos] = useState([]); //ein zweites state mit todos wird erstellt, weil i brauch in solides array mit todos das net verändert werden soll
+  const [filteredtodos, setFilteredTodos] = useState([]); //ein zweites state mit todos wird erstellt, weil i brauch ein solides array mit todos das net verändert werden soll
   //und eines wo ich die todos "herumschieben " kann
+  const [reload, setReload] = useState(false);//mit diesem state wird mit klick des buttons die page neu reloaded und somit alle Todos entfernt
 
   //useEffect
   useEffect(() => {
@@ -45,46 +46,91 @@ export default function ToDoList() {
     ]); //...todos  damit sog i dem PC:wenn ich schon todos habe füge die neue Eingabe einfach hinzu
     setInput(""); //input soll leer sein sobald man eine Todo submitted hat
   };
+  function removeTodos(event) {
+    event.preventDefault();
+    setReload(true);
+  }
 
-  return (
-    <div className="ToDoList">
-      <h1>To-Do-List App</h1>
-      <h2>Add Task</h2>
-      <div className="input">
-        <form onSubmit={handleSubmit}>
-          <input
-            value={input}
-            placeholder="Add to do"
-            className="input form-control form-control-lg w-50"
-            onChange={handleChange}
-          ></input>
-          <button className="setToDo">Create</button>
-        </form>
-        <div className="navigation">
-          <ul onClick={handleStatus}>
-            <li>
-              <button className="navigationbutton" value="uncompleted">
-                Todos
-              </button>
-            </li>
-            <li>
-              <button className="navigationbutton" value="completed">
-                Done
-              </button>
-            </li>
-            <li>
-              <button className="navigationbutton" value="all">
-                All
-              </button>
-            </li>
-          </ul>
-          <Output
-            todos={todos}
-            setTodos={setTodos}
-            filteredtodos={filteredtodos}
-          />
+  if (reload) {
+    return (
+      <div className="ToDoList">
+        <h1>To-Do-List App</h1>
+        <h2>Add Task</h2>
+        <div className="input">
+          <form onSubmit={handleSubmit}>
+            <input
+              value={input}
+              placeholder="Add to do"
+              className="input form-control form-control-lg w-50"
+              onChange={handleChange}
+            ></input>
+            <button className="setToDo">Create</button>
+          </form>
+          <div className="navigation">
+            <ul onClick={handleStatus}>
+              <li>
+                <button className="navigationbutton" value="uncompleted">
+                  Todos
+                </button>
+              </li>
+              <li>
+                <button className="navigationbutton" value="completed">
+                  Done
+                </button>
+              </li>
+              <li>
+                <button className="navigationbutton" value="all">
+                  All
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
+        <button onClick={removeTodos}>Delete All</button>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return (
+      <div className="ToDoList">
+        <h1>To-Do-List App</h1>
+        <h2>Add Task</h2>
+        <div className="input">
+          <form onSubmit={handleSubmit}>
+            <input
+              value={input}
+              placeholder="Add to do"
+              className="input form-control form-control-lg w-50"
+              onChange={handleChange}
+            ></input>
+            <button className="setToDo">Create</button>
+          </form>
+          <div className="navigation">
+            <ul onClick={handleStatus}>
+              <li>
+                <button className="navigationbutton" value="uncompleted">
+                  Todos
+                </button>
+              </li>
+              <li>
+                <button className="navigationbutton" value="completed">
+                  Done
+                </button>
+              </li>
+              <li>
+                <button className="navigationbutton" value="all">
+                  All
+                </button>
+              </li>
+            </ul>
+            <Output
+              todos={todos}
+              setTodos={setTodos}
+              filteredtodos={filteredtodos}
+            />
+          </div>
+        </div>
+        <button onClick={removeTodos}>Delete All</button>
+      </div>
+    );
+  }
 }
