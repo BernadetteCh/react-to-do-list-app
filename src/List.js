@@ -4,11 +4,11 @@ import "./List.css";
 export default function List({ todo, text, todos, setTodos }) {
   function handleDelete() {
     setTodos(todos.filter((el) => el.id !== todo.id));
-    //output.filter : geht durch alle todos die man bei der Eingabe erstellt.
-    //el => el.id !== list.id : if el (element). id does not match the id of the list it gets rid of it.
-    //ich filtere das state in meinem fall heißt es output aus und vergleiche es mit dem was ich angeklickt habe, das ist list.id
-    //und wenn es net übereinstimmt wird es gelöscht
+    //todos.filter : geht durch alle todos die man bei der Eingabe erstellt.
+    //el => el.id !== todo.id : if el (element). id does not match the id of the todo it gets rid of it.
   }
+
+  
 
   function handleCheck() {
     setTodos(
