@@ -94,94 +94,11 @@ export default function ToDoList() {
         <button className="deleteTodos" onClick={removeTodos}>
           Delete All
         </button>
+        <footer>
+          ✌Coded by Bernadette Christiner and is open-sourced on Github
+        </footer>
       </div>
     </div>
   );
-  /*
-  if (reload) {
-    return (
-      <div className="ToDoList">
-        <h1>To-Do-List App</h1>
-        <h2>Add Task</h2>
-        <div className="input">
-          <form onSubmit={handleSubmit}>
-            <input
-              value={input}
-              placeholder="Add to do"
-              className="input form-control form-control-lg w-50"
-              onChange={handleChange}
-            ></input>
-            <button className="setToDo">Create</button>
-          </form>
-          <div className="navigation">
-            <ul onClick={handleStatus}>
-              <li>
-                <button className="navigationbutton" value="uncompleted">
-                  Todos
-                </button>
-              </li>
-              <li>
-                <button className="navigationbutton" value="completed">
-                  Done
-                </button>
-              </li>
-              <li>
-                <button className="navigationbutton" value="all">
-                  All
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="Footer">
-          <button className="deleteTodos" onClick={removeTodos}>Delete All</button>
-        </div>
-      </div>
-    );
-  } else {
-    return (
-      <div className="ToDoList">
-        <h1>To-Do-List App</h1>
-        <h2>Add Task</h2>
-        <div className="input">
-          <form onSubmit={handleSubmit}>
-            <input
-              value={input}
-              placeholder="Add to do"
-              className="input form-control form-control-lg w-50"
-              onChange={handleChange}
-            ></input>
-            <button className="setToDo">Create</button>
-          </form>
-          <div className="navigation">
-            <ul onClick={handleStatus}>
-              <li>
-                <button className="navigationbutton" value="uncompleted">
-                  Todos
-                </button>
-              </li>
-              <li>
-                <button className="navigationbutton" value="completed">
-                  Done
-                </button>
-              </li>
-              <li>
-                <button className="navigationbutton" value="all">
-                  All
-                </button>
-              </li>
-            </ul>
-            <Output
-              todos={todos}
-              setTodos={setTodos}
-              filteredtodos={filteredtodos}
-            />
-          </div>
-        </div>
-        <div className="Footer">
-          <button className="deleteTodos" onClick={removeTodos}>Delete All</button>
-        </div>
-      </div>
-    );
-  }*/
+
 }
