@@ -95,7 +95,12 @@ export default function ToDoList() {
           Delete All
         </button>
         <footer>
-          ✌Coded by Bernadette Christiner and is open-sourced on Github
+          ✌Coded by Bernadette Christiner and is{" "}
+          <a href="https://github.com/BernadetteCh/react-to-do-list-app" target="_blank">
+            {" "}
+            open-sourced
+          </a>{" "}
+          on Github
         </footer>
       </div>
     </div>
