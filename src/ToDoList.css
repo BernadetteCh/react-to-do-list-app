@@ -74,3 +74,14 @@
 .ToDoList .button button:hover {
   color: #68caea;
 }
+
+.ToDoList .Footer footer{
+  position: absolute;
+  bottom: 25px;
+  color: rgb(0, 0, 0, 0.6);
+  font-size: 14px;
+  /*zentriert footer zentral: */
+  left: 50%;
+transform: translate(-50%);
+ 
+}
