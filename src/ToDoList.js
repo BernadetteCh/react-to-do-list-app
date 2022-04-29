@@ -90,20 +90,24 @@ export default function ToDoList() {
           />
         </div>
       </div>
-      <div className="Footer">
-        <button className="deleteTodos" onClick={removeTodos}>
+      <div className="button">
+        <button className="deleteAllTodosbutton" onClick={removeTodos}>
           Delete All
         </button>
+        </div>
+        <div className="Footer">
         <footer>
           ✌Coded by Bernadette Christiner and is{" "}
-          <a href="https://github.com/BernadetteCh/react-to-do-list-app" target="_blank">
+          <a href="https://github.com/BernadetteCh/react-to-do-list-app" target="_blank" rel="noreferrer">
             {" "}
             open-sourced
           </a>{" "}
           on Github
         </footer>
-      </div>
+        </div>
+    
     </div>
+    
   );
 
 }
