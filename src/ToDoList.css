@@ -85,3 +85,8 @@
 transform: translate(-50%);
  
 }
+
+.ToDoList .Footer footer a{
+  color: #1c5c9c;
+  text-decoration: none;
+}
